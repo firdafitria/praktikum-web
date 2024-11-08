@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+}
+
+.container div {
+    background: peachpuff;
+    border: 5px solid brown;
+    height: 100px;
+    flex: 1;
+}
+
+.link {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login {
+    margin-left: 20px;
+}
+
+.header-container {
+    color: aqua;
+    background-color: #D6E9FE;
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    width: 900px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

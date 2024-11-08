@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1
+      id="uji_heading"
+      onmouseover="sorot(this)"
+      onmouseout="KeluarSorot(this)"
+    >
+      Sorot dong!
+    </h1>
+
+    <h2 id="uji_klik" onmousedown="tahan(this)" onmouseup="lepas(this)">
+      Klik dong!
+    </h2>
+
+    <label for="uji_input">Uji Coba Inout</label><br />
+    <input type="text" id="uji_input" /><br />
+    <span id="uji_span"></span><br />
+    <button onclick="klik()">Klik</button>
+    <button>Ulangi</button>
+    <button onclick="ulangi()">Ulangi</button>
+    <input type="text" id="uji_input" onkeyup="tiru()" /><br />
+
+    <script>
+      function sorot(obj) {
+        Object.innerHTML = "Sudah disorot";
+      }
+      function Keluarsorot(obj) {
+        Object.innerHTML = "Sorot lagi dong!";
+      }
+      function tahan(obj) {
+        obj.innerHTML = "Lepasin...";
+      }
+      function lepas(obj) {
+        obj.innerHTML = "Klik lagi dong!";
+      }
+      function klik(){
+        valueInput = document.getElementById("uji_input").value;
+        document.getElementById("uji_span").innerHTML = valueInput;
+
+        if (valueInput == "") {
+            span.innerHTML = "Inputan kosong";
+            span.style = "color:red";
+        } else {
+            span.innerHTML = "Input : '"+valueInput+"'";
+            span.style = "color:blue";
+        }
+      }
+      function tiru() {
+        valueInput = document.getElementById("uji_input").value;
+        document.getElementById("uji_span").innerHTML = valueInput;
+      }
+      functionulangi() {
+        document.getElementById("uji_input").value = "";
+        document.getElementById("uji_span").innerHTML = "";
+        document.getElementById("uji_heading").innerHTML = "Sorot dong!";
+        document.getElementById("uji_klik").innerHTML = "Klik dong!";
+      }
+    </script>
+  </body>
+</html>
